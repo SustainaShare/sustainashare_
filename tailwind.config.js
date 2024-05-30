@@ -7,10 +7,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#E43B11',
-        button: '#28A963',
-        fontWhiteBg: '#232026',
-        fontTintedBg: '#EBEAEA',
+        primary: {
+          DEFAULT: '#E43B11',
+          light: '#F06845', // Lighter shade of primary
+        },
+        button: {
+          DEFAULT: '#28A963',
+          light: '#4FC287', // Lighter shade of button
+        },
+        fontWhiteBg: {
+          DEFAULT: '#232026',
+          light: '#3B373D', // Lighter shade of fontWhiteBg
+        },
+        fontTintedBg: {
+          DEFAULT: '#EBEAEA',
+          light: '#F2F1F1', // Lighter shade of fontTintedBg
+        },
       },
     },
   },
@@ -18,4 +30,3 @@ export default {
     // require('@tailwindcss/forms'),
   ],
 }
-
