@@ -1,12 +1,16 @@
 import './App.css'
-// import test from './components/Test'
-function App() {
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './pages/HomePage';
 
+function App() {
   return (
-    <>
-     <h2 className='text-3xl font-bold underline'>Vite + React</h2>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        {/* Add other routes here */}
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
