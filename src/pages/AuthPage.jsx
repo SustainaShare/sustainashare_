@@ -12,7 +12,7 @@ export function SignInPage() {
               alt="SustainAShare Logo"
             />
             <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-              Sign in to your account
+              Sign in to your SustainAShare account
             </h2>
           </div>
   
@@ -77,7 +77,7 @@ export function SignInPage() {
         </div>
       </>
     )
-  }
+}
   
 
 
@@ -178,7 +178,7 @@ export function BeneficiaryRegisterPage() {
           <p role="alert" className="mt-10 text-center text-sm text-gray-500">
             Already have an account?{' '}
             <a href="/login" className="font-semibold leading-6 text-button hover:text-button">
-              Sign in here
+              Log in here
             </a>
           </p>
         </div>
