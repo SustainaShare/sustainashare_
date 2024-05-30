@@ -78,7 +78,6 @@ export function SignInPage() {
       </>
     )
 }
-  
 
 
 export function BeneficiaryRegisterPage() {
