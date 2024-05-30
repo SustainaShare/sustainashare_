@@ -99,7 +99,7 @@ export default function Dashboard() {
         ...request,
         timeRequested: timeSince(request.timeRequestedDateTime)
       })));
-    }, 5000); // Update every minute
+    }, 5000); // Update every 5 Secs
 
     return () => clearInterval(interval);
   }, [requests]);
