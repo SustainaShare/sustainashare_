@@ -1,18 +1,24 @@
+
+import image1 from '../assets/images/test-image1.jpg';
+import image2 from '../assets/images/test-image2.jpg';
+import image3 from '../assets/images/test-image3.jpg';
+
+
 const testimonials = [
   {
     name: "John Doe",
     quote: "This service is amazing! It has greatly improved my productivity and efficiency.",
-    image: "/path-to-image1.jpg",
+    image: image1,
   },
   {
     name: "Jane Smith",
     quote: "I love using this service. It has made my life so much easier.",
-    image: "/path-to-image2.jpg",
+    image: image2,
   },
   {
     name: "Sam Johnson",
     quote: "Highly recommended! Exceptional quality and great customer support.",
-    image: "/path-to-image3.jpg",
+    image: image3,
   },
 ];
 
@@ -31,7 +37,7 @@ const TestimonialsSection = () => {
             <div key={testimonial.name} className="space-y-4">
               <img className="w-24 h-24 rounded-full mx-auto" src={testimonial.image} alt={testimonial.name} />
               <p className="text-lg leading-6 font-medium text-gray-900 text-center">{testimonial.name}</p>
-              <p className="text-base text-gray-500 text-center">`&quot;`{testimonial.quote}`&quot;`</p>
+              <p className="text-base text-gray-500 text-center">&quot;{testimonial.quote}&quot;</p>
             </div>
           ))}
         </div>

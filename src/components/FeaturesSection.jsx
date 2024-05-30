@@ -1,17 +1,17 @@
 const features = [
   {
-    title: "Feature One",
-    description: "Description for feature one. This feature provides exceptional value and benefits to users.",
+    title: "We make it easy",
+    description: "We’ve taken the headaches out of the donation process. Your team will be set up and donating in no time.",
     icon: "🌟",
   },
   {
-    title: "Feature Two",
-    description: "Description for feature two. It helps users achieve their goals efficiently and effectively.",
+    title: "It’s all in the SustainaShare App",
+    description: "Select your donation items and schedule delivery in just a few minutes each day. Need a driver? The SustainaShare App will dispatch one, and we’ll track the chain of custody to the recipient.",
     icon: "🚀",
   },
   {
-    title: "Feature Three",
-    description: "Description for feature three. This feature stands out with its unique capabilities.",
+    title: "Scale from one location to thousands",
+    description: "Whether your business is small or large or whether you’re donating tomatoes or tacos, SustainaShare’s vast network of nonprofit partners and 99% match rate means we’ll take the hassle out of finding a good home for your surplus.",
     icon: "💡",
   },
 ];
@@ -21,7 +21,7 @@ const FeaturesSection = () => {
     <div className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-base font-semibold text-indigo-600 tracking-wide uppercase">Features</h2>
+          <h2 className="text-base font-semibold text-primary tracking-wide uppercase">Features</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
             Key Features of Our Service
           </p>
@@ -34,7 +34,7 @@ const FeaturesSection = () => {
             {features.map((feature) => (
               <div key={feature.title} className="relative">
                 <dt>
-                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
                     {feature.icon}
                   </div>
                   <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{feature.title}</p>
