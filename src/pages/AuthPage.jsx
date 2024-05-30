@@ -69,7 +69,7 @@ export function SignInPage() {
   
             <p role="alert" className="mt-10 text-center text-sm text-gray-500">
               Not a member?{' '}
-              <a href="/register" className="font-semibold leading-6 text-button hover:text-button">
+              <a href="/register-donor" className="font-semibold leading-6 text-button hover:text-button">
                 Register Here
               </a>
             </p>
