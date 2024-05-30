@@ -1,4 +1,4 @@
-*/
+import logo from '../assets/images/logo.png'
 export default function RegisterPage() {
 return (
   <>
@@ -6,7 +6,7 @@ return (
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <img
           className="mx-auto h-10 w-auto"
-          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+          src={logo}
           alt="SustainAShare Logo"
         />
         <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
@@ -78,7 +78,7 @@ return (
 
         <p role="alert" className="mt-10 text-center text-sm text-gray-500">
           Already have an account?{' '}
-          <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+          <a href="/login" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
             Sign in here
           </a>
         </p>

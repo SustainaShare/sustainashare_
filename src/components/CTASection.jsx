@@ -3,8 +3,8 @@ const CTASection = () => {
     <div className="bg-primary">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-          <span className="block">Make a Difference Today</span>
-          <span className="block underline"> Donate Food and Help Fight Hunger <em>Sustainably</em></span>
+          <span className="block mb-16">Make a Difference Today</span>
+          <span className="block"> Donate Food and Help Fight Hunger <em>Sustainably</em></span>
         </h2>
         <p className="mt-4 text-lg leading-6 text-indigo-200">
           Your generosity can provide hope and nourishment to those in need. Together, we can combat hunger and build a stronger community.
@@ -13,7 +13,7 @@ const CTASection = () => {
           <div className="inline-flex rounded-md shadow">
             <a
               href="/donate-food"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50"
+              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-primary"
             >
               Donate Food
             </a>
@@ -21,7 +21,7 @@ const CTASection = () => {
           <div className="inline-flex rounded-md shadow">
             <a
               href="/donate-items"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50"
+              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-primary"
             >
               Donate Other Items
             </a>
@@ -29,7 +29,7 @@ const CTASection = () => {
           <div className="inline-flex rounded-md shadow">
             <a
               href="/volunteer"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50"
+              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-primary"
             >
               Volunteer
             </a>
