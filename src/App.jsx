@@ -10,8 +10,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<SignInPage />} />
-        <Route path="/register" element={<RegisterPage />} /> 
+        <Route path="/login-beneficiary" element={<SignInPage />} />
+        <Route path="/register-beneficiary" element={<RegisterPage />} /> 
         <Route path="/donation-requests" element={<RequestsPage />} />
         {/* <Route path="/donation-list" element={<DonationsPage />} /> */}
         {/* Add other routes here */}
