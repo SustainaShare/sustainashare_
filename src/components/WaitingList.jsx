@@ -107,51 +107,52 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
       <div className="relative py-3 sm:max-w-xl sm:mx-auto">
+        <h1 className="text-3xl font-bold mb-8">Donation Requests</h1> {/* Heading added here */}
         <div className="relative px-2 py-1 bg-white shadow-lg rounded-3xl sm:p-10">
-          <div className="max-w-2xl mx-auto">
-            <div className="divide-y divide-gray-200">
-              <ul role="list" className="divide-y divide-gray-700">
-                {requests.map((request) => (
-                  <li key={request.email} className="flex flex-col sm:flex-row justify-between gap-x-6 py-5">
-                    <div className="flex min-w-0 gap-x-4">
-                      <img className="h-12 w-12 flex-none rounded-full bg-gray-50" src={request.imageUrl} alt="" />
-                      <div className="min-w-0 flex-auto">
-                        <p className="text-sm font-semibold leading-6 text-gray-900">{request.name}</p>
-                        <p className="mt-1 truncate text-xs leading-5 text-gray-500">{request.email}</p>
-                        <p className="mt-1 text-xs leading-5 text-black"><em>{request.request}</em></p>
-                        <p className="mt-1 text-xs leading-5 text-gray-500">
-                          Requested <time dateTime={request.timeRequestedDateTime}>{request.timeRequested}</time>
-                        </p>
-                      </div>
-                    </div>
-                    <div className="mt-4 sm:mt-0 sm:flex sm:flex-col sm:items-end">
-                      {request.status === 'pending' && (
-                        <div className="flex gap-x-2 mt-2 sm:mt-0">
-                          <button 
-                            onClick={() => acceptRequest(request.email)} 
-                            className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-700"
-                          >
-                            Accept
-                          </button>
-                          <button 
-                            onClick={() => rejectRequest(request.email)} 
-                            className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-700"
-                          >
-                            Reject
-                          </button>
+            <div className="max-w-2xl mx-auto">
+                <div className="divide-y divide-gray-200">
+                <ul role="list" className="divide-y divide-gray-700">
+                    {requests.map((request) => (
+                    <li key={request.email} className="flex flex-col sm:flex-row justify-between gap-x-6 py-5">
+                        <div className="flex min-w-0 gap-x-4">
+                        <img className="h-12 w-12 flex-none rounded-full bg-gray-50" src={request.imageUrl} alt="" />
+                        <div className="min-w-0 flex-auto">
+                            <p className="text-sm font-semibold leading-6 text-gray-900">{request.name}</p>
+                            <p className="mt-1 truncate text-xs leading-5 text-gray-500">{request.email}</p>
+                            <p className="mt-1 text-xs leading-5 text-black"><em>{request.request}</em></p>
+                            <p className="mt-1 text-xs leading-5 text-gray-500">
+                            Requested <time dateTime={request.timeRequestedDateTime}>{request.timeRequested}</time>
+                            </p>
                         </div>
-                      )}
-                      {request.status === 'accepted' && (
-                        <p className="mt-4 text-sm font-semibold text-green-500">Accepted</p>
-                      )}
-                      {request.status === 'rejected' && (
-                        <p className="mt-4 text-sm font-semibold text-red-500">Rejected</p>
-                      )}
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
+                        </div>
+                        <div className="mt-4 sm:mt-0 sm:flex sm:flex-col sm:items-end">
+                        {request.status === 'pending' && (
+                            <div className="flex gap-x-2 mt-2 sm:mt-0">
+                            <button 
+                                onClick={() => acceptRequest(request.email)} 
+                                className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-700"
+                            >
+                                Accept
+                            </button>
+                            <button 
+                                onClick={() => rejectRequest(request.email)} 
+                                className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-700"
+                            >
+                                Reject
+                            </button>
+                            </div>
+                        )}
+                        {request.status === 'accepted' && (
+                            <p className="mt-4 text-sm font-semibold text-green-500">Accepted</p>
+                        )}
+                        {request.status === 'rejected' && (
+                            <p className="mt-4 text-sm font-semibold text-red-500">Rejected</p>
+                        )}
+                        </div>
+                    </li>
+                    ))}
+                </ul>
+                </div>
           </div>
         </div>
       </div>
