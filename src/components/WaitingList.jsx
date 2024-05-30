@@ -7,6 +7,7 @@ const donationRequests = [
     request: 'Funding for educational materials',
     imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     timeRequestedDateTime: '2023-05-28T13:23:00Z',
+    status: 'pending',
   },
   {
     name: 'Michael Foster',
@@ -14,6 +15,7 @@ const donationRequests = [
     request: 'Support for medical expenses',
     imageUrl: 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     timeRequestedDateTime: '2023-05-28T14:00:00Z',
+    status: 'pending',
   },
   {
     name: 'Dries Vincent',
@@ -21,6 +23,7 @@ const donationRequests = [
     request: 'Community development project funding',
     imageUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     timeRequestedDateTime: '2023-05-28T15:30:00Z',
+    status: 'pending',
   },
   {
     name: 'Lindsay Walton',
@@ -28,6 +31,7 @@ const donationRequests = [
     request: 'Assistance with housing expenses',
     imageUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     timeRequestedDateTime: '2023-05-28T16:00:00Z',
+    status: 'pending',
   },
   {
     name: 'Courtney Henry',
@@ -35,6 +39,7 @@ const donationRequests = [
     request: 'Funding for startup business',
     imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     timeRequestedDateTime: '2023-05-28T17:00:00Z',
+    status: 'pending',
   },
   {
     name: 'Tom Cook',
@@ -42,6 +47,7 @@ const donationRequests = [
     request: 'Aid for natural disaster relief',
     imageUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     timeRequestedDateTime: '2023-05-28T18:00:00Z',
+    status: 'pending',
   },
 ];
 
@@ -75,6 +81,18 @@ function timeSince(date) {
 export default function Dashboard() {
   const [requests, setRequests] = useState(donationRequests);
 
+  const acceptRequest = (email) => {
+    setRequests(requests.map(request => 
+      request.email === email ? { ...request, status: 'accepted' } : request
+    ));
+  };
+
+  const rejectRequest = (email) => {
+    setRequests(requests.map(request => 
+      request.email === email ? { ...request, status: 'rejected' } : request
+    ));
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setRequests(requests.map(request => ({
@@ -89,9 +107,8 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
       <div className="relative py-3 sm:max-w-xl sm:mx-auto">
-        {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform skew-y-0 -rotate-6 rounded-3xl"></div> */}
         <div className="relative px-4 py-10 bg-white shadow-lg rounded-3xl sm:p-20">
-          <div className="max-w-md mx-auto">
+          <div className="max-w-2xl mx-auto"> {/* Set the width here */}
             <div className="divide-y divide-gray-200">
               <ul role="list" className="divide-y divide-gray-100">
                 {requests.map((request) => (
@@ -101,19 +118,35 @@ export default function Dashboard() {
                       <div className="min-w-0 flex-auto">
                         <p className="text-sm font-semibold leading-6 text-gray-900">{request.name}</p>
                         <p className="mt-1 truncate text-xs leading-5 text-gray-500">{request.email}</p>
-                      </div>
-                    </div>
-                    <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                      <p className="text-sm leading-6 text-gray-900">{request.request}</p>
+                        <p className="mt-1 text-xs leading-5 text-gray-500">{request.request}</p>
                         <p className="mt-1 text-xs leading-5 text-gray-500">
                           Requested <time dateTime={request.timeRequestedDateTime}>{request.timeRequested}</time>
                         </p>
-                        {/* <div className="mt-1 flex items-center gap-x-1.5">
-                          <div className="flex-none rounded-full bg-emerald-500/20 p-1">
-                            <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                          </div>
-                          <p className="text-xs leading-5 text-gray-500">Online</p>
-                        </div> */}
+                      </div>
+                    </div>
+                    <div className="shrink-0 flex flex-col items-end">
+                      {request.status === 'pending' && (
+                        <div className="mt-4 flex gap-x-2">
+                          <button 
+                            onClick={() => acceptRequest(request.email)} 
+                            className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-700"
+                          >
+                            Accept
+                          </button>
+                          <button 
+                            onClick={() => rejectRequest(request.email)} 
+                            className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-700"
+                          >
+                            Reject
+                          </button>
+                        </div>
+                      )}
+                      {request.status === 'accepted' && (
+                        <p className="mt-4 text-sm font-semibold text-green-500">Accepted</p>
+                      )}
+                      {request.status === 'rejected' && (
+                        <p className="mt-4 text-sm font-semibold text-red-500">Rejected</p>
+                      )}
                     </div>
                   </li>
                 ))}
