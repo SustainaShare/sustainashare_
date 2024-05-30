@@ -2,17 +2,17 @@ const testimonials = [
   {
     name: "John Doe",
     quote: "Thanks to your generous donation, I can now access essential services that have greatly improved my life.",
-    image: "/path-to-image1.jpg",
+    image: "https://via.placeholder.com/150",
   },
   {
     name: "Jane Smith",
     quote: "Your support has made a significant impact on my daily life. I am so grateful for the help I've received.",
-    image: "/path-to-image2.jpg",
+    image: "https://via.placeholder.com/150",
   },
   {
     name: "Sam Johnson",
     quote: "I highly recommend supporting this cause. The quality of assistance and support has been exceptional.",
-    image: "/path-to-image3.jpg",
+    image: "https://via.placeholder.com/150",
   },
 ];
 

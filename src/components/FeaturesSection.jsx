@@ -1,18 +1,18 @@
 const features = [
   {
-    title: "Feature One",
-    description: "Description for feature one. This feature provides exceptional value and benefits to users.",
-    icon: "🌟",
+    title: "Educational Support",
+    description: "Your donations provide exceptional educational resources and opportunities to those in need.",
+    icon: "📚",
   },
   {
-    title: "Feature Two",
-    description: "Description for feature two. It helps users achieve their goals efficiently and effectively.",
-    icon: "🚀",
+    title: "Healthcare Access",
+    description: "With your help, we ensure efficient and effective healthcare services reach those who need them most.",
+    icon: "🏥",
   },
   {
-    title: "Feature Three",
-    description: "Description for feature three. This feature stands out with its unique capabilities.",
-    icon: "💡",
+    title: "Community Development",
+    description: "Your support stands out by enabling unique community development initiatives and programs.",
+    icon: "🌍",
   },
 ];
 
@@ -23,10 +23,10 @@ const FeaturesSection = () => {
         <div className="text-center">
           <h2 className="text-base font-semibold text-indigo-600 tracking-wide uppercase">Features</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Key Features of Our Service
+            How Your Donations Make a Difference
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
-            Discover the main features that make our service stand out.
+            Discover the key areas where your contributions have the most impact.
           </p>
         </div>
         <div className="mt-10">
