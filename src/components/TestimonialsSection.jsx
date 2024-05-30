@@ -22,6 +22,7 @@ const testimonials = [
   },
 ];
 
+
 const TestimonialsSection = () => {
   return (
     <div className="bg-gray-50 py-16">
@@ -29,7 +30,7 @@ const TestimonialsSection = () => {
         <div className="text-center">
           <h2 className="text-base font-semibold text-indigo-600 tracking-wide uppercase">Testimonials</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            What Our Customers Are Saying
+            What Our beneficiaries Would say Saying
           </p>
         </div>
         <div className="mt-10 space-y-12 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-6">
