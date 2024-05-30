@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import donationItems from '../dummy';
+/* eslint-disable react/prop-types */
+import { useState } from 'react';
 import Header from '../components/Header';
-import Footer from '../components/Footer';
 
-const Donation = ({ id, title, description, quantity, price }) => {
+// eslint-disable-next-line react/prop-types
+const Donation = ({ id, title, description }) => {
   const [addedQuantity, setAddedQuantity] = useState(0);
 
   const handleAddToCart = () => {
@@ -45,6 +45,7 @@ const Donation = ({ id, title, description, quantity, price }) => {
   );
 };
 
+// eslint-disable-next-line react/prop-types
 const DonationsPage = ({ donationItems }) => {
   return (
     <>
