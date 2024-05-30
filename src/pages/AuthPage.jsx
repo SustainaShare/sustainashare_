@@ -176,7 +176,7 @@ export function RegisterPage() {
 
           <p role="alert" className="mt-10 text-center text-sm text-gray-500">
             Already have an account?{' '}
-            <a href="/login" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+            <a href="/login-beneficiary" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
               Sign in here
             </a>
           </p>
