@@ -1,20 +1,21 @@
 const testimonials = [
   {
     name: "John Doe",
-    quote: "This service is amazing! It has greatly improved my productivity and efficiency.",
+    quote: "Thanks to your generous donation, I can now access essential services that have greatly improved my life.",
     image: "/path-to-image1.jpg",
   },
   {
     name: "Jane Smith",
-    quote: "I love using this service. It has made my life so much easier.",
+    quote: "Your support has made a significant impact on my daily life. I am so grateful for the help I've received.",
     image: "/path-to-image2.jpg",
   },
   {
     name: "Sam Johnson",
-    quote: "Highly recommended! Exceptional quality and great customer support.",
+    quote: "I highly recommend supporting this cause. The quality of assistance and support has been exceptional.",
     image: "/path-to-image3.jpg",
   },
 ];
+
 
 const TestimonialsSection = () => {
   return (
@@ -23,7 +24,7 @@ const TestimonialsSection = () => {
         <div className="text-center">
           <h2 className="text-base font-semibold text-indigo-600 tracking-wide uppercase">Testimonials</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            What Our Customers Are Saying
+            What Our beneficiaries Would say Saying
           </p>
         </div>
         <div className="mt-10 space-y-12 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-6">
