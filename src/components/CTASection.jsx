@@ -13,7 +13,7 @@ const CTASection = () => {
           <div className="inline-flex rounded-md shadow">
             <a
               href="/donate-food"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-primary"
+              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-gray-200"
             >
               Donate Food
             </a>
@@ -21,7 +21,7 @@ const CTASection = () => {
           <div className="inline-flex rounded-md shadow">
             <a
               href="/donate-items"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-primary"
+              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-gray-200"
             >
               Donate Other Items
             </a>
@@ -29,7 +29,7 @@ const CTASection = () => {
           <div className="inline-flex rounded-md shadow">
             <a
               href="/volunteer"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-primary"
+              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-gray-200"
             >
               Volunteer
             </a>
