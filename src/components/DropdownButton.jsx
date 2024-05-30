@@ -44,14 +44,14 @@ const DropdownButton = () => {
         >
           <div className="py-1" role="none">
             <a
-              href="/login"
+              href="/login-donor"
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
               role="menuitem"
             >
               Login as Donor
             </a>
             <a
-              href="/login"
+              href="/login-beneficiary"
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
               role="menuitem"
             >
