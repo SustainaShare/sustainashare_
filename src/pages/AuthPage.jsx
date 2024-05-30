@@ -176,11 +176,7 @@ export function RegisterPage() {
 
           <p role="alert" className="mt-10 text-center text-sm text-gray-500">
             Already have an account?{' '}
-<<<<<<< HEAD
             <a href="/login" className="font-semibold leading-6 text-button hover:text-button">
-=======
-            <a href="/login-beneficiary" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
->>>>>>> 16ecef5f48ec065c3e6732dad6579f9792413baf
               Sign in here
             </a>
           </p>
