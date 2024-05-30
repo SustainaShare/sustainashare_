@@ -1,4 +1,5 @@
-import './index.css'
+import './App.css'
+// import test from './components/Test'
 
 export default function App() {
   return (
