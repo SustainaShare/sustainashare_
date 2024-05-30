@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import { SignInPage, RegisterPage } from './pages/AuthPage';
 import RequestsPage from './pages/DonationsRequestsPage';
-// import DonationsPage from './pages/DonationsPage';
+import DonationsPage from './pages/DonationsPage';
+import donationItems from './dummy';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route path="/login-donor" element={<SignInPage />} />
         <Route path="/register-beneficiary" element={<RegisterPage />} /> 
         <Route path="/donation-requests" element={<RequestsPage />} />
-        {/* <Route path="/donation-list" element={<DonationsPage />} /> */}
+        <Route path="/donation-list" element={<DonationsPage donationItems={donationItems} />} />
         {/* Add other routes here */}
       </Routes>
     </Router>
