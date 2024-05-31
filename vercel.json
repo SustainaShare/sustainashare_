@@ -1,6 +1,5 @@
 {
     "redirects": [
-        { "source": "/(.*)", "destination": "/" },
-        { "source": "/me", "destination": "/profile", "permanent": false }
+        { "source": "/(.*)", "destination": "/" }
     ]
 }
