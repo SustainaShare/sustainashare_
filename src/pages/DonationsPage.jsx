@@ -6,7 +6,7 @@ import { navLinks } from '../dummyData';
 import DropdownButton from '../components/DropdownButton';
 const actions = [DropdownButton]
 
-const DonationProductCard = ({ id, title, description }) => {
+const DonationProductCard = ({ id, title, description, image_link }) => {
     const [addedQuantity, setAddedQuantity] = useState(0);
 
     const handleIncrement = () => {
@@ -31,7 +31,7 @@ const DonationProductCard = ({ id, title, description }) => {
                 className="h-48 w-full bg-gray-200 flex flex-col justify-between p-4 bg-cover bg-center"
                 style={{
                     backgroundImage:
-                     "url('https://th.bing.com/th?id=OIP.VkSIm1cz1r3uBAKnBMIwswHaE8&w=306&h=204&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2')",
+                     `url('${image_link}')`,
                 }}
             >
                 <div className="flex justify-between">
@@ -114,7 +114,7 @@ const DonationProductCard = ({ id, title, description }) => {
                     onClick={handleAddToCart}
                     disabled={addedQuantity === 0}
                 >
-                    {addedQuantity > 0 ? 'Add to Cart' : 'Increase Quantity'}
+                    {addedQuantity > 0 ? 'Request Donation' : 'Specify Quantity'}
                 </button>
             </div>
         </div>
