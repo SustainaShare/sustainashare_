@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage';
 import { BeneficiaryRegisterPage, DonorRegisterPage, SignInPage } from './pages/AuthPage';
 import RequestsPage from './pages/DonationsRequestsPage';
 import DonationsPage from './pages/DonationsPage';
-import donationItems from './dummy';
+import { donationProducts } from './dummyData';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route path="/register-donor" element={<DonorRegisterPage />} />
         <Route path="/register-beneficiary" element={<BeneficiaryRegisterPage />} /> 
         <Route path="/donation-requests" element={<RequestsPage />} />
-        <Route path="/donation-list" element={<DonationsPage donationItems={donationItems} />} />
+        <Route path="/donation-list" element={<DonationsPage donationItems={donationProducts} />} />
         {/* Add other routes here */}
       </Routes>
     </Router>

@@ -1,7 +1,7 @@
-import DropdownButton from './DropdownButton';
-import logo from '../assets/images/logo.png'
+import PropTypes from 'prop-types';
+import logo from "../assets/images/logo.png"
 
-const Header = () => {
+const Header = ({ navLinks, actions }) => {
   return (
     <header className="bg-white shadow">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -11,19 +11,39 @@ const Header = () => {
               <img className="h-16 w-16" src={logo} alt="Logo" />
             </div>
             <div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
-              <a href="/" className="border-primary text-fontWhiteBg inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
-              <a href="/about" className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">About</a>
-              <a href="/services" className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Services</a>
-              <a href="/contact" className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Contact</a>
+              {navLinks.map(({ href, label, current }) => (
+                <a
+                  key={href}
+                  href={href}
+                  className={`border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
+                    current ? 'border-primary text-fontWhiteBg' : ''
+                  }`}
+                >
+                  {label}
+                </a>
+              ))}
             </div>
           </div>
           <div className="flex items-center">
-            <DropdownButton />
+            {actions.map((ActionComponent, index) => (
+              <ActionComponent key={index} />
+            ))}
           </div>
         </div>
       </div>
     </header>
   );
+};
+
+Header.propTypes = {
+  navLinks: PropTypes.arrayOf(
+    PropTypes.shape({
+      href: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      current: PropTypes.bool,
+    })
+  ).isRequired,
+  actions: PropTypes.arrayOf(PropTypes.elementType).isRequired,
 };
 
 export default Header;

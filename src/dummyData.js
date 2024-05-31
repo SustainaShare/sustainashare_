@@ -1,4 +1,4 @@
-const donationItems = [
+export const donationProducts = [
     {
       id: 1,
       title: 'Canned Goods (mixed)',
@@ -35,5 +35,11 @@ const donationItems = [
       image: 'path/to/soup.jpg',
     },
     // Add more food items here
+];
+
+export const navLinks = [
+    { href: '/', label: 'Home', current: true },
+    { href: '/about', label: 'About' },
+    { href: '/services', label: 'Services' },
+    { href: '/contact', label: 'Contact' },
   ];
-  export default donationItems;
