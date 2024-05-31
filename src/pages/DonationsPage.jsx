@@ -22,7 +22,7 @@ const DonationProductCard = ({ id, title, description, image_link }) => {
     const handleAddToCart = () => {
         setAddedQuantity(addedQuantity + 1);
         // Simulate adding to cart (replace with actual cart logic)
-        console.log(`Added ${addedQuantity + 1} unit(s) of "${title}" (ID: ${id}) to cart`);
+        console.log(`Rquested ${addedQuantity + 1} unit(s) of "${title}" (ID: ${id}) to cart`);
     };
 
     return (
